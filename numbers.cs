@@ -3,10 +3,20 @@
 // IntegerDivision();
 // IntegerRange();
 // IntegerOverflow();
-WorkWithDoubles();
-DoubleDivision();
-DoubleRange();
-DoublePrecision();
+// WorkWithDoubles();
+// DoubleDivision();
+// DoubleRange();
+// DoublePrecision();
+// DecimalRange();
+// decimalPrecision();
+CalculateAreaOfACircle();
+
+void CalculateAreaOfACircle()
+{
+    double r = 32;
+    double Area = Math.PI + r * r;
+    Console.WriteLine($"The Area of a Circle : {Area}");
+}
 
 void WorkWithIntegers()
 {
@@ -105,4 +115,22 @@ void DoublePrecision()
     double third = 1.0 / 3.0;
 
     Console.WriteLine($"1 / 3 = {third}");
+}
+
+void DecimalRange()
+{
+    decimal min = decimal.MinValue;
+    decimal max = decimal.MaxValue;
+    Console.WriteLine($"The range of the decimal type is {min} to {max}");
+}
+
+void decimalPrecision()
+{
+    double a = 1.0;
+    double b = 3.0;
+    Console.WriteLine(a / b);
+
+    decimal c = 1.0M;
+    decimal d = 3.0M;
+    Console.WriteLine(c / d);
 }
