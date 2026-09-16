@@ -48,10 +48,12 @@ dotnet --version
 ```text
 Cs-Tutorials/
 ├── README.md
+├── branches-loops.cs    # if/else, while, do-while, for & nested loops
 ├── hello-world.cs      # Output & string interpolation
 ├── numbers.cs          # int / double / decimal, math & precision
 ├── Replace.cs          # Replace, case conversion & searching
-└── Trim.cs             # TrimStart / TrimEnd / Trim
+├── Trim.cs             # TrimStart / TrimEnd / Trim
+└── tuples.cs           # Value tuples, named tuples & records
 ```
 
 > New tutorials simply get dropped in alongside the existing ones — the structure stays flat on purpose.
@@ -86,9 +88,13 @@ No `dotnet build`, no `.csproj`, no `Main()` — `dotnet run` compiles and execu
 | [`numbers.cs`](numbers.cs) | Numbers & math | `int`, `double`, `decimal`, `+ - * /`, order of precedence, integer division & modulus, `int.MaxValue` / `MinValue`, overflow, floating-point vs. decimal precision |
 | [`Trim.cs`](Trim.cs) | Trimming whitespace | `Trim()`, `TrimStart()`, `TrimEnd()` |
 | [`Replace.cs`](Replace.cs) | Searching & changing strings | `Replace()`, `ToUpper()`, `ToLower()`, `Contains()`, `StartsWith()`, `EndsWith()` |
+| [`branches-loops.cs`](branches-loops.cs) | Branching & loops | `if` / `else`, `&&` and `||`, `while`, `do`…`while`, `for`, nested loops, `%` and a small "sum the multiples of 3" challenge |
+| [`tuples.cs`](tuples.cs) | Tuples & records | Value tuples, named tuple elements, tuple mutation, non-destructive `with` expressions, positional `record` types and adding methods to a record |
 
-**Tip:** `numbers.cs` only runs `CalculateAreaOfACircle()` by default. Uncomment any of the other
-calls at the top of the file (e.g. `WorkWithIntegers();`) to explore that area — one at a time.
+**Tip:** `numbers.cs`, `branches-loops.cs` and `tuples.cs` each run only **one** example by default.
+Uncomment any of the other calls at the top of the file (e.g. `WorkWithIntegers();` or
+`WorkWithWhile();`) to explore that area — one at a time. The extra examples are local functions,
+so the ones you leave commented out can produce a harmless `CS8321` "declared but never used" warning.
 
 ---
 
@@ -96,7 +102,8 @@ calls at the top of the file (e.g. `WorkWithIntegers();`) to explore that area �
 
 Adding a lesson takes about a minute:
 
-1. Create a new file in the repo root, e.g. `Loops.cs` (PascalCase matches the existing naming style).
+1. Create a new file in the repo root — either PascalCase (`Loops.cs`) or lowercase/kebab-case
+   (`branches-loops.cs`), matching the mix of styles already in the repo.
 2. Write top-level statements — optionally with small local functions, just like `numbers.cs`.
 3. Run it with `dotnet run Loops.cs` and make sure the output is clear.
 4. Add a row to the **Tutorials** table above so others can find it.
@@ -113,12 +120,15 @@ Topics I plan to work through — this list is deliberately open-ended and will 
 - [x] Numbers, arithmetic & numeric types
 - [x] Trimming whitespace
 - [x] Replacing & searching inside strings
-- [ ] Conditionals & branching (`if` / `switch`)
-- [ ] Loops (`for`, `while`, `foreach`)
+- [x] Branching (`if` / `else`, `&&`, `||`)
+- [x] Loops (`while`, `do`…`while`, `for`, nested loops)
+- [x] Tuples & records (named tuples, `with` expressions, positional records)
+- [ ] `switch` expressions & pattern matching
 - [ ] Arrays, `List<T>` and other collections
+- [ ] `foreach` over collections
 - [ ] Methods, parameters & return values
-- [ ] Classes, structs & records (OOP basics)
-- [ ] Interfaces, inheritance & polymorphism
+- [ ] Classes, structs & interfaces (OOP basics)
+- [ ] Inheritance & polymorphism
 - [ ] Exception handling
 - [ ] File input/output
 - [ ] LINQ
