@@ -49,11 +49,13 @@ dotnet --version
 Cs-Tutorials/
 ├── README.md
 ├── branches-loops.cs    # if/else, while, do-while, for & nested loops
-├── hello-world.cs      # Output & string interpolation
-├── numbers.cs          # int / double / decimal, math & precision
-├── Replace.cs          # Replace, case conversion & searching
-├── Trim.cs             # TrimStart / TrimEnd / Trim
-└── tuples.cs           # Value tuples, named tuples & records
+├── hello-world.cs       # Output & string interpolation
+├── lists.cs             # List<T>, collection expressions & Fibonacci
+├── numbers.cs           # int / double / decimal, math & precision
+├── patterns.cs          # switch expressions & pattern matching
+├── Replace.cs           # Replace, case conversion & searching
+├── Trim.cs              # TrimStart / TrimEnd / Trim
+└── tuples.cs            # Value tuples, named tuples & records
 ```
 
 > New tutorials simply get dropped in alongside the existing ones — the structure stays flat on purpose.
@@ -90,8 +92,10 @@ No `dotnet build`, no `.csproj`, no `Main()` — `dotnet run` compiles and execu
 | [`Replace.cs`](Replace.cs) | Searching & changing strings | `Replace()`, `ToUpper()`, `ToLower()`, `Contains()`, `StartsWith()`, `EndsWith()` |
 | [`branches-loops.cs`](branches-loops.cs) | Branching & loops | `if` / `else`, `&&` and `||`, `while`, `do`…`while`, `for`, nested loops, `%` and a small "sum the multiples of 3" challenge |
 | [`tuples.cs`](tuples.cs) | Tuples & records | Value tuples, named tuple elements, tuple mutation, non-destructive `with` expressions, positional `record` types and adding methods to a record |
+| [`lists.cs`](lists.cs) | Lists & collections | `List<T>`, collection expressions (`["Alice", "Bob"]`), `foreach`, `Add()` / `Remove()`, indexing and `Count`, `IndexOf()` (returns `-1` when missing), `Sort()`, plus a Fibonacci challenge |
+| [`patterns.cs`](patterns.cs) | Pattern matching & switch expressions | Raw string literals (`"""`), `StringReader` + `yield return` in an `IEnumerable<T>` method, `double.TryParse()`, `switch` expressions with type patterns (`Deposit d => …`), records as pattern targets, and tuple results from a `switch` |
 
-**Tip:** `numbers.cs`, `branches-loops.cs` and `tuples.cs` each run only **one** example by default.
+**Tip:** `numbers.cs`, `branches-loops.cs`, `tuples.cs` and `lists.cs` each run only **one** example by default.
 Uncomment any of the other calls at the top of the file (e.g. `WorkWithIntegers();` or
 `WorkWithWhile();`) to explore that area — one at a time. The extra examples are local functions,
 so the ones you leave commented out can produce a harmless `CS8321` "declared but never used" warning.
@@ -123,9 +127,10 @@ Topics I plan to work through — this list is deliberately open-ended and will 
 - [x] Branching (`if` / `else`, `&&`, `||`)
 - [x] Loops (`while`, `do`…`while`, `for`, nested loops)
 - [x] Tuples & records (named tuples, `with` expressions, positional records)
-- [ ] `switch` expressions & pattern matching
-- [ ] Arrays, `List<T>` and other collections
-- [ ] `foreach` over collections
+- [x] `switch` expressions & pattern matching
+- [x] Arrays, `List<T>` and other collections
+- [x] `foreach` over collections
+- [ ] `yield return` & lazy iterator methods
 - [ ] Methods, parameters & return values
 - [ ] Classes, structs & interfaces (OOP basics)
 - [ ] Inheritance & polymorphism
