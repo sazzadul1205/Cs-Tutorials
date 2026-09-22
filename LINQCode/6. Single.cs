@@ -10,6 +10,7 @@ class Single
         List<int> numbers = [1, 2, 3, 4, 5];
 
         int number = numbers.Single(n => n == 3);
+        // int number = numbers.SingleOrDefault(n => n == 3); -> Same as FirstOrDefault() but for single 
 
         Console.WriteLine(number);
     }
