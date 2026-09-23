@@ -11,6 +11,7 @@ class Person
 
         set
         {
+            // the -20 docent meet the condition so can not be set so previous data will be shown 
             if (value >= 0)
             {
                 age = value;

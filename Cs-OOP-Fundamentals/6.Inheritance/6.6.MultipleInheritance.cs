@@ -1,6 +1,6 @@
 class Person
 {
-    public string Name;
+    public string? Name;
 }
 
 interface IStudent
@@ -32,7 +32,7 @@ class Program
     {
         Student student = new Student();
 
-        student.Name = "John";
+        student.Name = "Sazzadul";
 
         student.Study();
         student.Work();

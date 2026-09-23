@@ -1,6 +1,6 @@
 class Person
 {
-    public string Name;
+    public string? Name;
 }
 
 class Student : Person
@@ -10,7 +10,7 @@ class Student : Person
 
 class CollegeStudent : Student
 {
-    public string CollegeName;
+    public string? CollegeName;
 }
 
 class Program
@@ -19,9 +19,9 @@ class Program
     {
         CollegeStudent student = new CollegeStudent();
 
-        student.Name = "John";
-        student.StudentId = 101;
-        student.CollegeName = "ABC College";
+        student.Name = "Sazzadul";
+        student.StudentId = 1;
+        student.CollegeName = "MIT";
 
         Console.WriteLine(student.Name);
         Console.WriteLine(student.StudentId);
